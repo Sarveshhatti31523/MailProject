@@ -23,14 +23,14 @@ public class Receiver_MailTest {
 	         sl.receiverlogin();
 		     driver.manage().window().maximize();
 		
-		    Receiverobj ro=new Receiverobj(driver);
-		    Thread.sleep(5000);
+		     Receiverobj ro=new Receiverobj(driver);
+		     Thread.sleep(5000);
 		    
 		    //validating whether the attachment is displayed 
-	        Assert.assertTrue(driver.findElement(By.xpath("//*[@data-test-id='attachment-icon']")).isDisplayed());
-	        ro.iconbutton().click();
-	        ro.attachment().click();	        
-	        Thread.sleep(5000);
+	         Assert.assertTrue(driver.findElement(By.xpath("//*[@data-test-id='attachment-icon']")).isDisplayed());
+	         ro.iconbutton().click();
+	         ro.attachment().click();	        
+	         Thread.sleep(5000);
 	        
 	        //switching to frames to fetch the contents of document 
 	        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='b_n I_Zmk8Gp em_N']")));
